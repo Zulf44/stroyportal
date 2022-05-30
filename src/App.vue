@@ -1,26 +1,41 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="wrapper">
+    <header-panel></header-panel>
+    <path-panel></path-panel>
+    <product-name></product-name>
+    <product-options></product-options>
+    <product-block></product-block>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HeaderPanel from "@/components/HeaderPanel";
+import PathPanel from "./components/PathPanel.vue";
+import ProductName from "./components/ProductName.vue";
+import ProductOptions from "./components/ProductOptions.vue";
+import ProductBlock from "./components/ProductBlock.vue";
 
 export default {
-  name: 'App',
   components: {
-    HelloWorld
-  }
-}
+    HeaderPanel,
+    PathPanel,
+    ProductName,
+    ProductOptions,
+    ProductBlock,
+  },
+};
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+.wrapper {
+  width: 1280px;
+  height: 786px;
+  margin: 0 auto;
+}
+
+.app-wrapper {
+  height: 100%;
+  width: 1110px;
+  margin: 0 auto;
 }
 </style>
